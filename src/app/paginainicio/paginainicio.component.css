@@ -9,6 +9,7 @@
 .texto {
   max-width: 900px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .bienvenida {
@@ -32,8 +33,9 @@
   margin-top: 15px;
 }
 
-
-/* IMAGEN */
+/* ==========================================
+   2. SECCIÓN DE IMAGEN PRINCIPAL
+   ========================================== */
 
 .imagen {
   display: flex;
@@ -41,10 +43,11 @@
   align-items: center;
   padding: 45px 20px;
   background-color: #fffaf4;
+  box-sizing: border-box;
 }
 
 .imagen img {
-  width: 80%;
+  width: 100%;
   max-width: 900px;
   height: 380px;
   object-fit: cover;
@@ -52,12 +55,15 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
 }
 
-
+/* ==========================================
+   3. PRESENTACIÓN
+   ========================================== */
 
 .presentacion {
   text-align: center;
   padding: 40px 20px;
   background-color: #f7f1e8;
+  box-sizing: border-box;
 }
 
 .presentacion h2 {
@@ -75,13 +81,53 @@
   color: #6b5b45;
 }
 
-
-app-platoestrella {
-  display: block;
-  margin-top: 35px;
-}
-
+/* Componentes embebidos */
+app-platoestrella,
 app-bebidaestrella {
   display: block;
   margin-top: 35px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   4. RESPONSIVO (MÓVILES)
+   ========================================== */
+
+@media (max-width: 768px) {
+  .inicio,
+  .presentacion {
+    padding: 35px 15px;
+  }
+
+  .bienvenida {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  .texto h1 {
+    font-size: 32px; /* Reducción para evitar desbordamiento horizontal */
+  }
+
+  .descripcion {
+    font-size: 16px;
+  }
+
+  .imagen {
+    padding: 20px 10px;
+  }
+
+  .imagen img {
+    height: 220px; /* Reducción proporcional de altura en móviles */
+    border-radius: 15px;
+  }
+
+  .presentacion h2 {
+    font-size: 24px;
+  }
+
+  .presentacion p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
 }
