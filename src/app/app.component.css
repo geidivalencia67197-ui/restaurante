@@ -1,1 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Evita el scroll horizontal en móviles */
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
