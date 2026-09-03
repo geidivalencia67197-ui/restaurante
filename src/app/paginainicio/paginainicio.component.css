@@ -1,0 +1,87 @@
+.inicio {
+  width: 100%;
+  background: #f7f1e8;
+  padding: 60px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.texto {
+  max-width: 900px;
+  margin: auto;
+}
+
+.bienvenida {
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: #a67c52;
+  margin-bottom: 10px;
+}
+
+.texto h1 {
+  font-size: 55px;
+  font-family: Georgia, serif;
+  color: #332302;
+  margin: 0;
+}
+
+.descripcion {
+  font-size: 22px;
+  color: #6b5b45;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+
+/* IMAGEN */
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 20px;
+  background-color: #fffaf4;
+}
+
+.imagen img {
+  width: 80%;
+  max-width: 900px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+
+.presentacion {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f1e8;
+}
+
+.presentacion h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #332302;
+  margin-bottom: 15px;
+}
+
+.presentacion p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #6b5b45;
+}
+
+
+app-platoestrella {
+  display: block;
+  margin-top: 35px;
+}
+
+app-bebidaestrella {
+  display: block;
+  margin-top: 35px;
+}

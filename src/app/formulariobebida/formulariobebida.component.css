@@ -1,0 +1,86 @@
+.container-fluid {
+    padding: 50px 8%;
+    background-color: #f8f1f5;
+    text-align: center;
+}
+
+
+.container-fluid h2 {
+    color: #255a2c;
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-family: Georgia, serif;
+}
+
+.container-fluid > div {
+    width: 70%;
+    margin: 20px auto;
+    padding: 22px 25px;
+    background-color: #d8cb8d;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(59, 121, 52, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-fluid > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(42, 99, 42, 0.25);
+}
+
+.container-fluid label {
+    display: block;
+    color: #332302;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.container-fluid .form-control,
+.container-fluid .form-select {
+    display: inline-block;
+    width: 65%;
+    padding: 12px 15px;
+    border: 2px solid #255a2c;
+    border-radius: 12px;
+    background-color: #fffdf5;
+    color: #265e1e;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.container-fluid .form-control::placeholder {
+    color: #77745d;
+}
+
+.container-fluid .form-control:focus,
+.container-fluid .form-select:focus {
+    border-color: #332302;
+    box-shadow: 0 0 8px rgba(42, 99, 42, 0.25);
+}
+
+.container-fluid .btn-manila {
+    padding: 12px 22px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 12px;
+    background-color: #255a2c;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container-fluid .btn-manila:hover {
+    background-color: #31662f;
+    transform: translateY(-3px);
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #d8cb8d;
+    margin: 0;
+}

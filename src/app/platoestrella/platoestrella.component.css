@@ -1,0 +1,39 @@
+.Plato { 
+  width: 80%;
+  margin: 50px auto;
+  padding: 30px; 
+  text-align: center;
+  background-color: #d8cb8d;
+  border-radius: 20px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+} 
+
+.Plato h1 { 
+  font-size: 35px;
+  color: #255a2c;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.Plato h2 { 
+  font-size: 28px; 
+  color: #332302;
+  font-family: Georgia, serif; 
+}
+
+.Plato p { 
+  font-size: 18px; 
+  color: #332302;
+  max-width: 700px; 
+  margin: 20px auto;
+} 
+
+.Plato img {
+  width: 40%; 
+  max-width: 500px;
+  height: 300px; 
+  object-fit: cover;
+  display: block; 
+  margin: 25px auto 0;
+  border-radius: 15px; 
+}

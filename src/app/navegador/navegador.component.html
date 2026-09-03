@@ -1,0 +1,48 @@
+<section> 
+    <ul class="nav nav-pills">
+
+        <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/"
+               routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact: true}">
+               paginainicio
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/comidas"
+               routerLinkActive="active">
+               Comidas
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/bebidas"
+            routerLinkActive="active">
+            Bebidas
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/pedido"
+            routerLinkActive="active">
+            Pedidos
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/juego"
+            routerLinkActive="active">
+            Juego
+            </a>
+        </li>
+
+    </ul>
+</section>
+
+<router-outlet></router-outlet>

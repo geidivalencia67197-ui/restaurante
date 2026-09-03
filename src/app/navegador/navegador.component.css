@@ -1,0 +1,17 @@
+section {
+    background-color: rgb(45, 85, 35);
+}
+
+.nav-link {
+    color: rgb(254, 254, 254);
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgb(67, 140, 65);
+}
+
+.nav-link.active {
+    background-color: rgb(116, 153, 67);
+    color: white;
+}

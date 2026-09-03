@@ -1,0 +1,46 @@
+<section class="container-fluid">
+
+  <h1>Formulario de Pedido</h1>
+
+  <h3>Datos del cliente</h3>
+
+  <label>Nombre completo</label>
+  <input type="text" class="form-control" placeholder="Escribe tu nombre completo" [(ngModel)]="nombre">
+
+  <label>Número de celular</label>
+  <input type="text" class="form-control" placeholder="Escribe tu número de celular" [(ngModel)]="celular">
+
+  <label>Dirección de entrega</label>
+  <input type="text" class="form-control" placeholder="Escribe la dirección de entrega" [(ngModel)]="direccion">
+
+  <h3>Resumen del pedido</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Subtotal</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="items.length === 0">
+        <td colspan="5">No hay productos en el pedido</td>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>${{ item.precio | number }}</td>
+        <td>${{ item.precio * item.cantidad | number }}</td>
+        <td><button class="btn btn-sm btn-danger" (click)="eliminar(item.nombre)">Quitar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Total: ${{ total | number }}</h3>
+
+  <button class="btn-pedido" (click)="realizarPedido()">Realizar pedido</button>
+
+</section>

@@ -1,0 +1,68 @@
+<app-formulariocomida></app-formulariocomida>
+
+<section class="container-fluid">
+
+  <h2>Búsqueda</h2>
+
+  <div>
+    <label>Buscar por nombre:</label>
+    <input type="text" class="form-control d-inline-block"
+           placeholder="Nombre de la comida"
+           [(ngModel)]="nombreBusqueda"
+           (keyup.enter)="buscarPorNombre()">
+    <button class="btn btn-manila" (click)="buscarPorNombre()">Buscar</button>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Buscar por ingrediente:</label>
+    <input type="text" class="form-control d-inline-block"
+           placeholder="Ingrediente"
+           [(ngModel)]="ingredienteBusqueda"
+           (keyup.enter)="buscarPorIngrediente()">
+    <button class="btn btn-manila" (click)="buscarPorIngrediente()">Buscar</button>
+  </div>
+
+  <br>
+  <button class="btn btn-secondary" *ngIf="vista === 'resultados'" (click)="volverACategorias()">
+    ← Volver al menú por categorías
+  </button>
+
+</section>
+
+<p *ngIf="cargando" class="text-center">Cargando...</p>
+
+<section class="comidas" *ngIf="vista === 'categorias' && !cargando">
+  <div *ngFor="let cat of categorias">
+    <h1>{{ cat.strCategory }}</h1>
+
+    <div class="comidas-grid">
+      <div class="comida" *ngFor="let item of comidasPorCategoria[cat.strCategory]">
+        <h2>{{ item.strMeal }}</h2>
+        <img [src]="item.strMealThumb" [alt]="item.strMeal">
+        <p>Precio: ${{ getPrecio(item.idMeal) | number }}</p>
+        <button class="btn btn-manila" (click)="agregarAlCarrito(item)">
+          Añadir al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="comidas" *ngIf="vista === 'resultados' && !cargando">
+  <h1>Resultados</h1>
+  <p *ngIf="mensajeVacio">{{ mensajeVacio }}</p>
+
+  <div class="comidas-grid">
+    <div class="comida" *ngFor="let item of resultados">
+      <h2>{{ item.strMeal }}</h2>
+      <p>Ingredientes: {{ getIngredientes(item) }}</p>
+      <p>Precio: ${{ getPrecio(item.idMeal) | number }}</p>
+      <img [src]="item.strMealThumb" [alt]="item.strMeal">
+      <button class="btn btn-manila" (click)="agregarAlCarrito(item)">
+        Añadir al carrito
+      </button>
+    </div>
+  </div>
+</section>

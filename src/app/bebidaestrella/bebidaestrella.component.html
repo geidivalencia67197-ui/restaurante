@@ -1,0 +1,6 @@
+<div class="Bebida" *ngIf="bebida">
+  <h1>Bebida Estrella</h1>
+  <h2>{{ bebida.nombre }}</h2>
+  <p>{{ bebida.categoria }}</p>
+  <img [src]="bebida.imagen" [alt]="bebida.nombre">
+</div>

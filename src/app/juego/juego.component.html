@@ -1,0 +1,14 @@
+<section class="juego-container">
+  <h2>Juego de Memoria Manila</h2>
+  <p>Encuentra el plato y la bebida escondidos en la matriz de 4x4.</p>
+
+  <div class="tablero-grid">
+    <div 
+      class="casilla" 
+      *ngFor="let casilla of tablero; let i = index" 
+      (click)="descubrir(i)"
+    >
+      <img [src]="casilla.imagen" alt="Carta" />
+    </div>
+  </div>
+</section>
