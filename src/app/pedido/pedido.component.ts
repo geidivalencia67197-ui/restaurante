@@ -120,7 +120,6 @@ export class PedidoComponent {
       { align: 'center' }
     );
 
-    // Línea separadora
     pdf.line(20, 63, 190, 63);
 
     pdf.setFont('helvetica', 'bold');

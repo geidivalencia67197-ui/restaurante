@@ -114,9 +114,6 @@
     box-sizing: border-box;
 }
 
-/* ==========================================
-   3. RESPONSIVO (MÓVILES)
-   ========================================== */
 
 @media (max-width: 768px) {
     .container-fluid {

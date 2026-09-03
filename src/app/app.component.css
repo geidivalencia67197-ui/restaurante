@@ -4,7 +4,7 @@
 
 body, html {
   width: 100%;
-  overflow-x: hidden; /* Evita el scroll horizontal en móviles */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
 }
